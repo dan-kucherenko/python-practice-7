@@ -1,4 +1,4 @@
-from app.io.output import print_to_console, write_to_file
+from app.io.output import print_to_console, write_to_file, write_dataframe_to_csv
 from app.io.input import get_user_input, read_input_file, read_input_file_pandas
 
 
@@ -26,7 +26,7 @@ def main():
     # Print read data to console
     print_to_console(dataframe)
     # Write read data to file in CSV format
-    dataframe.to_csv("data/input_output.csv", index=False)
+    write_dataframe_to_csv("data/input_output.csv", dataframe)
 
 
 if __name__ == "__main__":
